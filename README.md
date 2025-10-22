@@ -108,8 +108,9 @@ It’s ideal for **researchers, students, and developers** working on:
 ## 📷 Screenshot
 
 **IEC 61850-9-2 SV Publisher Interface**
+<img width="1202" height="831" alt="SV-attack" src="https://github.com/user-attachments/assets/8079230c-bd9c-416b-8ad9-ad103f341513" />
+<img width="1004" height="723" alt="image" src="https://github.com/user-attachments/assets/56efef92-6420-41d9-93f5-4a45698025a7" />
 
-![SV Simulator Screenshot](docs/sv_simulator_ui.png)
 
 ---
 
