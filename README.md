@@ -136,8 +136,8 @@ If this simulator assists your research or project, please cite as:
 ## 🧑‍💻 Author
 **Sugandh Pratap**  
 Electrical Engineer & Researcher – Power System Cybersecurity  
-Email: [youremail@example.com]  
-LinkedIn: [linkedin.com/in/yourprofile](#)
+Email: sugandh@iitk.ac.in  
+LinkedIn: https://www.linkedin.com/in/sugandhp/
 
 ---
 
