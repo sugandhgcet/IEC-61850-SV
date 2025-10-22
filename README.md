@@ -1,55 +1,146 @@
-🧠 IEC 61850-9-2 Sampled Values (SV) Simulator
+# ⚡ IEC 61850-9-2 Sampled Values (SV) Simulator
+**Developed by [Sugandh Pratap](mailto:)**
 
-Developed by Sugandh Pratap
+A Python-based simulator for **publishing and decoding IEC 61850-9-2 Sampled Values (SV)** messages used in **digital substations**.  
+This tool enables testing, validation, and cybersecurity research on **Sampled Value communication** — including the simulation of **cyber-attacks** like false data injection and zero-packet injection.
 
-This tool is a lightweight yet powerful simulator designed to publish and decode IEC 61850-9-2 Sampled Values (SV) messages over Ethernet networks. It allows users to test, validate, and analyze SV communication used in digital substations under both normal and cyber-attack conditions.
+---
 
-⚙️ Key Features
+## 🧠 Overview
 
-SV Publisher
-Generates real-time three-phase voltage and current waveforms (Va, Vb, Vc, Ia, Ib, Ic) based on user-defined parameters:
+The **IEC 61850-9-2 SV Simulator** provides a complete environment to:
+- Generate (publish) real-time SV packets with customizable parameters.
+- Decode (subscribe) and analyze SV messages on the network.
+- Simulate and visualize normal and attack scenarios in **substation automation systems (SAS)**.
 
-Frequency (Hz)
+It’s ideal for **researchers, students, and developers** working on:
+- Substation communication testing
+- Cybersecurity for smart grids
+- Intrusion detection and watermarking techniques
 
-Samples per cycle
+---
 
-Voltage and current amplitude
+## 🧩 Features
 
-VLAN ID, APPID, and svID
+### 🖥 SV Publisher
+- Generates real-time **3-phase voltage and current signals** (Va, Vb, Vc, Ia, Ib, Ic)
+- Fully configurable parameters:
+  - Network Interface  
+  - VLAN ID, APPID, svID  
+  - Source & Destination MAC  
+  - Frequency (Hz), Samples/Cycle  
+  - Voltage and Current Amplitudes  
+- Displays live waveform plots during publishing  
+- Sends frames over Ethernet in **IEC 61850-9-2 format**
 
-Custom source and destination MAC addresses
+### 🔍 SV Decoder
+- Captures SV packets from a selected interface
+- Decodes and displays:
+  - Ethernet, APPID, and VLAN headers  
+  - svID, sample count, and dataset values  
+- Useful for analyzing SV communication behavior and validating interoperability
 
-Configurable network interface
+### 🧠 Cyber-Attack Simulation
+- Inject **false, zero, or manipulated SV frames**  
+- Test **false data injection (FDI)** and **delay-based attacks**  
+- Evaluate the impact on **IEDs, controllers**, and **Wide Area Monitoring Systems (WAMS)**  
+- Supports testing of **watermarking** and **spectral signature-based anomaly detection** methods
 
-SV Decoder
-Captures and decodes live or recorded SV frames for analysis. Displays decoded values and frame structure to study communication behavior.
+### 📈 Real-time Visualization
+- Voltage and current waveforms updated live
+- Intuitive plots for quick signal monitoring and debugging
 
-Cyber-Attack Simulation
-Enables insertion of false or manipulated SV packets to study false data injection, zero injection, or delay-based attacks and their impact on subscriber IEDs or controllers. Useful for validating intrusion detection or watermarking-based protection algorithms.
+---
 
-Real-time Visualization
-Displays live voltage and current waveforms during simulation for intuitive signal monitoring.
+## 🧰 Technology Stack
 
-🧩 Applications
+| Component | Technology |
+|------------|-------------|
+| Language | Python |
+| GUI | PyQt5 / Tkinter |
+| Packet Handling | Scapy |
+| Plotting | Matplotlib |
+| Protocol | IEC 61850-9-2 (Sampled Values) |
 
-Research and teaching in IEC 61850 digital substations
+---
 
-Testing of SV subscribers and IED communication
+## 🚀 Installation
 
-Development of cybersecurity algorithms for substation automation systems
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/<yourusername>/IEC61850-9-2-SV-Simulator.git
+   cd IEC61850-9-2-SV-Simulator
+   ```
 
-Validation of watermarking or spectral signature-based anomaly detection methods
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   *(Typical dependencies: `scapy`, `pyqt5`, `matplotlib`, `numpy`)*
 
-🖥️ Technology Stack
+3. **Run the Application**
+   ```bash
+   python SV_Simulator.py
+   ```
 
-Language: Python
+---
 
-GUI Framework: PyQt / Tkinter
+## ⚙️ Usage
 
-Networking: Scapy for Ethernet frame generation and capture
+### 1. Start SV Publisher
+- Configure parameters (frequency, voltage/current amplitude, samples per cycle, etc.)
+- Select the appropriate **network interface**
+- Click **Start Simulation**
+- Observe live waveforms of Va, Vb, Vc, Ia, Ib, Ic
 
-Plotting: Matplotlib
+### 2. Start SV Decoder
+- Switch to the **SV Decoder** tab
+- Select the network interface to capture from
+- Click **Start Decoding** to view live SV packet data
 
-📊 Example Use Case
+### 3. Simulate an Attack
+- Inject zero or false samples to simulate FDI attacks
+- Observe changes in the waveform or in a subscribing IED
+- Useful for validating detection algorithms
 
-Simulate a 3-phase 60 Hz system with 80 samples/cycle, 10 kV line voltage, and 50 A current amplitude. Inject zero or manipulated data frames to test SV subscriber response and protection algorithms.
+---
+
+## 📷 Screenshot
+
+**IEC 61850-9-2 SV Publisher Interface**
+
+![SV Simulator Screenshot](docs/sv_simulator_ui.png)
+
+---
+
+## 🧪 Research Applications
+
+This simulator has been used in ongoing research on:
+- Watermarking-based cyber attack detection in SV communication  
+- Spectral signature-based authentication of IEC 61850 messages  
+- Security evaluation of **Digital Substations** and **Wide Area Monitoring Systems (WAMS)**  
+
+If you use this simulator for your research, please cite the related publications or acknowledge this repository.
+
+---
+
+## 📜 Citation
+
+If this simulator assists your research or project, please cite as:
+
+> **Sugandh Pratap**, *"IEC 61850-9-2 Sampled Values Simulator for Cybersecurity and Communication Testing"*, 2025.  
+> GitHub Repository: [https://github.com/<yourusername>/IEC61850-9-2-SV-Simulator](https://github.com/<yourusername>/IEC61850-9-2-SV-Simulator)
+
+---
+
+## 🧑‍💻 Author
+**Sugandh Pratap**  
+Electrical Engineer & Researcher – Power System Cybersecurity  
+Email: [youremail@example.com]  
+LinkedIn: [linkedin.com/in/yourprofile](#)
+
+---
+
+## 📄 License
+This project is released under the **MIT License**.  
+You are free to use, modify, and distribute it for research and educational purposes with proper credit.
