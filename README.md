@@ -1,5 +1,5 @@
 # ⚡ IEC 61850-9-2 Sampled Values (SV) Simulator
-**Developed by [Sugandh Pratap](mailto:)**
+**Developed by [Sugandh Pratap](mailto:sugandh@iitk.ac.in)**
 
 A Python-based simulator for **publishing and decoding IEC 61850-9-2 Sampled Values (SV)** messages used in **digital substations**.  
 This tool enables testing, validation, and cybersecurity research on **Sampled Value communication** — including the simulation of **cyber-attacks** like false data injection and zero-packet injection.
