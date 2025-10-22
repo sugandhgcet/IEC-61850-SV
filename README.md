@@ -44,7 +44,6 @@ It’s ideal for **researchers, students, and developers** working on:
 - Inject **false, zero, or manipulated SV frames**  
 - Test **false data injection (FDI)** and **delay-based attacks**  
 - Evaluate the impact on **IEDs, controllers**, and **Wide Area Monitoring Systems (WAMS)**  
-- Supports testing of **watermarking** and **spectral signature-based anomaly detection** methods
 
 ### 📈 Real-time Visualization
 - Voltage and current waveforms updated live
@@ -117,9 +116,7 @@ It’s ideal for **researchers, students, and developers** working on:
 ## 🧪 Research Applications
 
 This simulator has been used in ongoing research on:
-- Watermarking-based cyber attack detection in SV communication  
-- Spectral signature-based authentication of IEC 61850 messages  
-- Security evaluation of **Digital Substations** and **Wide Area Monitoring Systems (WAMS)**  
+- Security evaluation of **Digital Substations**
 
 If you use this simulator for your research, please cite the related publications or acknowledge this repository.
 
